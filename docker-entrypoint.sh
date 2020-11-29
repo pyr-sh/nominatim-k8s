@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$NOMINATIM_MODE" != "CREATE" ] && [ "$NOMINATIM_MODE" != "RESTORE" ]; then
     # Default to CREATE
@@ -9,11 +9,7 @@ fi
 NOMINATIM_DATA_PATH=${NOMINATIM_DATA_PATH:="/srv/nominatim/data"}
 NOMINATIM_DATA_LABEL=${NOMINATIM_DATA_LABEL:="data"}
 NOMINATIM_PBF_URL=${NOMINATIM_PBF_URL:="http://download.geofabrik.de/asia/maldives-latest.osm.pbf"}
-NOMINATIM_POSTGRESQL_DATA_PATH=${NOMINATIM_POSTGRESQL_DATA_PATH:="/var/lib/postgresql/9.5/main"}
-# Google Storage variables
-NOMINATIM_SA_KEY_PATH=${NOMINATIM_SA_KEY_PATH:=""}
-NOMINATIM_PROJECT_ID=${NOMINATIM_PROJECT_ID:=""}
-NOMINATIM_GS_BUCKET=${NOMINATIM_GS_BUCKET:=""}
+NOMINATIM_POSTGRESQL_DATA_PATH=${NOMINATIM_POSTGRESQL_DATA_PATH:="/var/lib/postgresql/13/main"}
 NOMINATIM_PG_THREADS=${NOMINATIM_PG_THREADS:=2}
 
 if [ "$NOMINATIM_MODE" == "CREATE" ]; then
